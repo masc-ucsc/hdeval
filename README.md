@@ -1,6 +1,6 @@
-# hdleval
+# HDEval
 
-Hardware Description Language Evaluation suite for LLM
+Hardware Description Evaluation suite for LLM
 
 This repository has a set of benchmarks to evaluate LLMs performance with
 Hardware generation.
@@ -44,7 +44,7 @@ After cloning the repo, run decrypt, and it will create the json files for all
 the files needed.
 
 ```
-git clone git@github.com:masc-ucsc/hdleval.git
+git clone git@github.com:masc-ucsc/HDEval.git
 cd hdeval/sample
 ./decrypt
 ```
@@ -53,16 +53,37 @@ If you want to commit or pull request, use the crypt. NEVER push the json file.
 
 ```
 cd hdeval/bench_name
-../crypt bench_name_version
-git add bench_name_version.hdeval
+../crypt version
+git add version.hdeval
 # NEVER NEVER ADD the json file
 ```
 
 Do decrypt sample:
 ```
 cd sample
-rm -f sample_24a.json   # decrypt will not overwrite if it exists already
-../decrypt sample_24a
+rm -f 24a.json   # decrypt will not overwrite if it exists already
+../decrypt 24a
+```
+
+The suggestion is to use the year and letters for the version. To pick the latest version,
+the alphabetical sort is used over the hdeval filename (ls | sort).
+
+# Python interface
+
+The suggestion is to use the "hdeval_open("bench", ["version"]) provided by
+hdeval.py sample code.  Cut and paste it to your python code, it will download
+the benchmark requested into your "~/.cache/hdeval" directory, keeping only the
+hdeval format (never the json). It returns a string with the json text file
+contents.
+
+Sample of usage:
+```
+# Before
+x = json.load("some.json")
+
+# Now
+txt = hdeval_open("sample","24a")
+x = json.read(txt)
 ```
 
 # Organization

@@ -24,7 +24,7 @@ if [ "${ARG}" == "" ]; then
 else
 	BASE=$ARG
 	if [ -f "${BASE}.json" ]; then
-		echo "Converting JSON: ${BASE}.json to HDLEval: ${BASE}.hdeval"
+		echo "Converting JSON: ${BASE}.json to HDEval: ${BASE}.hdeval"
 	else
 		echo "ERROR: Input JSON: ${BASE}.json does not exist"
 		exit 3
