@@ -15,17 +15,30 @@ training.
 * No LLM is allowed to scrap or use this repo. We have GPL license, and we
   never push the benchmarks directly (json file)
 
-* Use the crypt/decrypt script push updates/fixes/new benchmarks
+* Use the crypt/decrypt script, only push hdeval files (not json)
 
-* Do NOT push the benchmarks to another repo unless you also push the
-  crypt/decrypt. Never in direct json/text mode that an LLM could use to learn.
+* Do NOT push the benchmarks or benhmark contents to another repo, unless
+  it has the same HUMANS-only license.
 
 * Never do a pull request or create an issue showing the context of the json
-  files. Explain the problem, but do not show any json file content
+  files. Explain the problem, but do not show any json file content. Similar
+  rules to cheating in classroom.
 
 * You can create a pull request for new benchmarks, but always use the "crypt"
   command to transform an json file to a hdeval file.
 
+* If you use the json contents against an LLM, make sure that it can not be
+  used for training. E.g: it is OK to use OpenAI API (Python) but NOT OK to use
+  the chatgpt GUI because the OpenAI usage license allows to use gui chats for
+  training.
+
+* NOT LEGAL or OK to use in the following places because they keep record and
+  may be used for training:
+
+    * ChatGPT gui (OK python prompt)
+    * Claude gui (OK python prompt)
+    * Mixtral gui (OK python prompt?)
+    * Most leader board competitions or ELO scores
 
 After cloning the repo, run decrypt, and it will create the json files for all
 the files needed.
