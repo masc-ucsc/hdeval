@@ -25,7 +25,7 @@ training.
   rules to cheating in classroom.
 
 * You can create a pull request for new benchmarks, but always use the "crypt"
-  command to transform an json file to a hdeval file.
+  command to transform the json file[s] to hdeval file[s].
 
 * If you use the json contents against an LLM, make sure that it can not be
   used for training. E.g: it is OK to use OpenAI API (Python) but NOT OK to use
@@ -35,16 +35,16 @@ training.
 * NOT LEGAL or OK to use in the following places because they keep record and
   may be used for training:
 
-    * ChatGPT gui (OK python prompt)
-    * Claude gui (OK python prompt)
-    * Mixtral gui (OK python prompt?)
-    * Most leader board competitions or ELO scores
+    * Not OK with ChatGPT gui (OK python prompt)
+    * Not OK with Claude gui (OK python prompt)
+    * Not OK with Mixtral gui (OK python prompt)
+    * Not OK with leader board competitions or ELO scores
 
 After cloning the repo, run decrypt, and it will create the json files for all
 the files needed.
 
 ```
-git clone git@github.com:masc-ucsc/HDEval.git
+git clone git@github.com:masc-ucsc/hdeval.git
 cd hdeval/sample
 ./decrypt
 ```

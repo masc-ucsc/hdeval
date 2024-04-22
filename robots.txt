@@ -1,0 +1,3 @@
+# Not sure if used for github repos, but worth to set
+User-agent: *
+Disallow: /
