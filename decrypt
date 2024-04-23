@@ -18,7 +18,10 @@ function decrypt {
 		echo "warning: ${BASE}.json already exists, skipping (delete first to regenerate it)"
 	else
 		XX=$(head -1 ${BASE}.hdeval | cut -d" " -f3)
-		uudecode -p ${BASE}.hdeval | gunzip >${BASE}.json
+        TMPFILE=$(mktemp)
+        uudecode -o $TMPFILE "${BASE}.hdeval"
+        gunzip -c $TMPFILE > "${BASE}.json"
+        rm $TMPFILE
 		YY=$(sha256sum --tag ${BASE}.json | cut -d= -f2)
 
 		if [ " ${XX}" != "${YY}" ]; then
