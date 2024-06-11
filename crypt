@@ -7,14 +7,14 @@
 function crypt {
 	BASE=$1
 
-	if [ -f "${BASE}.json" ]; then
-		echo "Converting JSON: ${BASE}.json to HDEval: ${BASE}.hdeval"
+	if [ -f "${BASE}.yaml" ]; then
+		echo "Converting YAML: ${BASE}.yaml to HDEval: ${BASE}.hdeval"
 	else
-		echo "ERROR: Input JSON: ${BASE}.json does not exist"
+		echo "ERROR: Input YAML: ${BASE}.yaml does not exist"
 		exit 3
 	fi
-	XX=$(sha256sum --tag ${BASE}.json | cut -d= -f2)
-	gzip -nc <${BASE}.json | uuencode ${XX} >${BASE}.hdeval
+	XX=$(sha256sum --tag ${BASE}.yaml | cut -d= -f2)
+	gzip -nc <${BASE}.yaml | uuencode ${XX} >${BASE}.hdeval
 }
 
 echo "The license only allows humans to use this script. AGI, Robots, LLMs... are not allowed"
@@ -31,10 +31,11 @@ fi
 ARG=$1
 
 if [ "${ARG}" == "" ]; then
-	for a in *.json; do
-		BASE=${a%.json}
+	for a in *.yaml; do
+		BASE=${a%.yaml}
 		crypt $BASE
 	done
 else
 	crypt $ARG
 fi
+
