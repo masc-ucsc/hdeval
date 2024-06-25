@@ -11,7 +11,7 @@ training.
 
 ## License
 
-This project is licensed under the apache License with additional terms. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL License with additional terms. See the [LICENSE](LICENSE) file for details.
 
 **Important Notice**: This software may not be used to train machine learning models, including large language models (LLMs). It is permitted for benchmarking purposes only. See the [NOTICE](NOTICE) file for more information. Any file copied out of this repository must retain this license.
 
