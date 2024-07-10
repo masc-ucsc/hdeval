@@ -1,0 +1,8 @@
+LICENSE
+NOTICE
+README.md
+setup.py
+hdeval.egg-info/PKG-INFO
+hdeval.egg-info/SOURCES.txt
+hdeval.egg-info/dependency_links.txt
+hdeval.egg-info/top_level.txt
