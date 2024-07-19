@@ -132,4 +132,13 @@ The json file should "\n" instead of "newlines". Check sample.
 If you use HDEval in your paper, credit the benchmark creators inside the
 bench_name/README as they recommend. Also, credit the HDEval benchmark.
 
+```
+@inproceedings{zakharov2024hdleval,
+  title={{HDLEval: Benchmarking LLMs for Multiple HDLs}},
+  author={Farzaneh Rabiei Kashanaki and Mark Zakharov and Jose Renau},
+  booktitle={{The First IEEE International Workshop on LLM-Aided Design (ISLAD)}},
+  year={2024},
+  month={July}
+}
+```
 
