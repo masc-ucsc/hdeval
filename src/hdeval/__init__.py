@@ -1,4 +1,2 @@
-from hdeval import HDEvalInterface
-
-hd_eval = HDEvalInterface()
+from .hdeval_interface import HDEvalInterface
 
