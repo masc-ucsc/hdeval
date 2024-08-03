@@ -1,2 +1,2 @@
-from .hdeval_interface import HDEvalInterface
+from .hdeval import HDEvalInterface
 
