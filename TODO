@@ -14,3 +14,9 @@
   + Pick a "lead" for new release (Jayaraj?)
   + Check VerilogEval v2, and compare against
 
+* Add VerilogEval v2 specification to RTL
+  + To make it easier to test (populate same yaml fields converted to hdeval)
+
+* Add a filed to indicate supported languages?
+  + hdl for hdeval
+  + Verilog for VerilogEval
