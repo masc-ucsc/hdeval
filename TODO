@@ -1,0 +1,16 @@
+
+* The directories that have *.hdeval should be a top directory like sample
+
+* Create a small readme (24a.md) for each benchmark explaining:
+  + high level idea 
+  + How to cite the test
+  + Any special constrain/source
+  + Create a plot HDLAgent run using a couple of LLMs to have as a reference point
+
+* The new 25a hdeval test
+  + Include only the 24a tests that at least fail with GPT-4 (no agent)
+  + Add the new riscv/Gameboy tests as separate tests
+  + Say waveform (top level) also as alternative test method
+  + Pick a "lead" for new release (Jayaraj?)
+  + Check VerilogEval v2, and compare against
+
