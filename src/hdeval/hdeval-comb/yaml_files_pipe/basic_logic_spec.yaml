@@ -1,0 +1,6 @@
+description: 'Design a module that accepts two 4-bit inputs. The module should have
+  two outputs ''O1'' and ''O2''. ''O1'' should hold the result of A AND B, while ''O2''
+  should hold the result of A OR B. The input: [3:0]A, B and the output: [3:0]O1,
+  [3:0]O2.'
+interface: module basic_logic (input  [3:0] A, input  [3:0] B, output [3:0] O1, output
+  [3:0] O2);

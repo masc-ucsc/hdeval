@@ -1,0 +1,14 @@
+description: 'SHA256SIG1: the SHA256SIG1 function, a component of the SHA-256 cryptographic
+  hash function. The function takes two parameters: rs1 and rd, representing source
+  and destination register indices, respectively. It performs a specific transformation
+  on a 32-bit input value from the source register (rs1), then stores the transformed
+  result into the destination register (rd). Here''s a breakdown of its functions:
+  Extract 32-bit Input: It retrieves a 32-bit input value (inb) from the source register
+  specified by rs1. Compute Result: The transformation applied to inb involves three
+  functions: Rotate Right 17 Bits (ror32(inb, 17)): Performs a bitwise rotation to
+  the right by 17 bits. Rotate Right 19 Bits (ror32(inb, 19)): Performs a bitwise
+  rotation to the right by 19 bits. Shift Right 10 Bits (inb >> 10): Performs a bitwise
+  right shift by 10 bits. The final result is obtained by XOR-ing the outputs of these
+  three functions. Store Result: The computed 32-bit result is then sign-extended
+  (EXTS(result)) and stored in the destination register specified by rd.'
+interface: module SHA256SIG1(input [31:0] rs1, output reg [31:0] rd);

@@ -1,0 +1,4 @@
+description: 'Create a module that takes a 4 bit wide input bus named `element_i`
+  and replicates and concatenates it four times, creating 16 bit wide output bus named
+  `result_o`. Input(s): element_i[3:0]. Output(s): result_o[15:0].'
+interface: module _4_replication (input [3:0] element_i, output [15:0] result_o);

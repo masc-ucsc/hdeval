@@ -1,0 +1,4 @@
+description: 'brev8(Reverse the bits in each byte of a source register):  it reverses
+  the order of the bits in every byte of a register. the sourse register is `rs` and
+  the result will be saved in `rd`.'
+interface: module brev8( input [31:0] rs, output reg [31:0] rd);

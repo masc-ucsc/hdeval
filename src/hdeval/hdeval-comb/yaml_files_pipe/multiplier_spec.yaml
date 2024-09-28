@@ -1,0 +1,3 @@
+description: 'Design a module that multiplies two 4-bit numbers resulting in an 8-bit
+  output. Inputs: [3:0]a, [3:0]b. Output: [7:0]product'
+interface: module multiplier (input  [3:0] a, input  [3:0] b, output [7:0] product);

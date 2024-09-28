@@ -1,0 +1,6 @@
+description: 'Design a module that outputs a 16 bit bus named ''result_o'' that is
+  the concatenation of 8 bit bus ''a_i'' and 8 bit bus ''b_i'', where ''a_i'' are
+  the upper 8 bits and ''b_i'' are the lower 8 bits. Input(s): a_i[7:0], b_i[7:0].
+  Output(s): result_o[15:0].'
+interface: module simple_concatenation (input [7:0] a_i, input [7:0] b_i, output [15:0]
+  result_o);

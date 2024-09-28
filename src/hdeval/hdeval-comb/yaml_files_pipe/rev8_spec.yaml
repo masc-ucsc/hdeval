@@ -1,0 +1,3 @@
+description: 'rev8(Byte-reverse register): This function reverses the order of the
+  bytes in `rs`. the input is rs and the result will be saved in `rd`.'
+interface: module rev8( input [31:0] rs, output reg [31:0] rd);

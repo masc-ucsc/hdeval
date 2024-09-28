@@ -1,0 +1,5 @@
+description: 'Implement a module to divide an 8-bit number ''a'' by a 4-bit number
+  ''b'' and provide quotient and remainder outputs. Inputs: [7:0]a, [3:0]b. Outputs:
+  [7:0]quotient, [3:0]remainder'
+interface: module divider (input  [7:0] a, input  [3:0] b, output [7:0] quotient,
+  output [3:0] remainder);

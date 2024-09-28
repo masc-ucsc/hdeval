@@ -1,0 +1,98 @@
+description: >
+  We are making a vector processor and need to implement the following functional
+  unit:
+      Adder/Subtracter Unit
+          recv_msg: A 64-bit input, where the first 32 bits represent the first operand
+  and the second 32 bits represent the second operand.
+          recv_val: A signal indicating that the operands are valid.
+          recv_rdy: A signal indicating that the unit is ready to receive operands.
+          send_msg: A 32-bit output representing the result of the addition/subtraction.
+          send_val: A signal indicating that the result is valid.
+          send_rdy: A signal indicating that the next unit is ready to receive the
+  result.
+
+  Can you please implement this for floating point addition and subtraction, combinational,
+  so the latency is one cycle.
+
+  a fully compliant IEEE 754 floating-point adder/subtractor is a complex task that
+  requires handling a variety of special cases, including infinities, NaNs, denormal
+  numbers, and rounding modes.
+
+  This version of the module handles the following special cases:
+
+      If either operand is NaN, the result is NaN.
+      If both operands are infinity, the result is infinity if they have the same
+  sign, or NaN if they have different signs and the operation is subtraction.
+      If one operand is infinity and the other is not, the result is infinity with
+  the sign of the infinite operand.
+      If the result overflows (the exponent is greater than 255), the result is infinity
+  with the sign of the result.
+      If the result underflows (the exponent is less than 0), the result is zero with
+  the sign of the result.
+  Remember, you are implementing a floating point adder/subtractor!
+
+
+
+  The module `FPAddSubUnit` is designed to perform floating-point addition or subtraction
+  on two 32-bit IEEE 754 floating-point numbers encapsulated within a 64-bit input
+  message. It handles the calculation based on the specified operation (addition or
+  subtraction), taking into account various special cases such as NaN (Not a Number),
+  infinity, overflow, and underflow. Here's a high-level description:
+
+
+  ### Module Name
+
+  - `FPAddSubUnit`
+
+
+  ### Inputs
+
+  - `recv_msg` (64 bits): Contains two 32-bit floating-point numbers to be processed.
+  The higher 32 bits (`[63:32]`) represent the first operand, and the lower 32 bits
+  (`[31:0]`) represent the second operand.
+
+  - `recv_val` (1 bit): A valid signal indicating that the `recv_msg` data is valid
+  and ready to be processed.
+
+  - `send_rdy` (1 bit): A ready signal indicating that the downstream component is
+  ready to accept data.
+
+  - `operation` (1 bit): Specifies the operation to be performed; 0 for addition and
+  1 for subtraction.
+
+
+  ### Outputs
+
+  - `recv_rdy` (1 bit): Indicates that the module is ready to receive data. This is
+  typically connected to a signal indicating the readiness of the module to accept
+  new input.
+
+  - `send_msg` (32 bits): The result of the floating-point operation, formatted as
+  a 32-bit IEEE 754 floating-point number.
+
+  - `send_val` (1 bit): A valid signal indicating that the `send_msg` data is valid
+  and ready to be sent to the next component.
+
+
+  ### Functionality
+
+  1. **Operand Extraction**: The module first extracts the two operands from the `recv_msg`
+  input.
+
+  2. **Ready Signal Management**: It synchronizes the `recv_rdy` and `send_val` signals
+  with `send_rdy` and `recv_val` respectively to manage data flow.
+
+  3. **Operation Decoding**: Depending on the `operation` signal, it performs either
+  addition or subtraction.
+
+  4. **Special Cases Handling**:
+     - NaN (Not a Number): If any operand is NaN, the result is set to that NaN operand.
+     - Infinity: Operations involving infinity are handled according to IEEE 754 rules,
+  including cases for addition or subtraction of infinities.
+     - Overflow and Underflow: The module checks for overflow and underflow conditions,
+  adjusting the result accordingly.
+  5. **Normalization**: The result is normalized to ensure it fits within the 32-bit
+  IEEE 754 format, adjusting the exponent and mantissa as necessary.
+interface: module FPAddSubUnit(input wire [63:0] recv_msg, input wire recv_val, output
+  wire recv_rdy, output wire [31:0] send_msg, output wire send_val, input wire send_rdy,
+  input wire operation );

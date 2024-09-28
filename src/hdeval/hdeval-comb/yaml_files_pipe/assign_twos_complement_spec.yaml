@@ -1,0 +1,4 @@
+description: 'Design a module that accepts a 4-bit binary number as input and outputs
+  the corresponding 2''s complement of that number. The goal is to calculate the 2''s
+  complement of a binary number. The input: bin_input and the output: [3:0]complement_output.'
+interface: module assign_twos_complement (input  [3:0] bin_input, output [3:0] complement_output);

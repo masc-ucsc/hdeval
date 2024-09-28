@@ -1,0 +1,8 @@
+description: 'Design a four 4x1 Mux (Module name: four_mux). For the module, you should
+  have 16 inputs (16-bit `In_i`) in a single bus, four select lines 4-bit `s`(S0 to
+  S3), and one single bit output (Out_o) which is determined by the select line. If
+  ''s'' is zero, then bit zero of ''In_i'' should be connected to ''Out_o'' and if
+  ''s'' is the max value 15, then the MSB of ''In_i'' should be connected to ''Out_o''.
+  One can extrapolate the rest of the connections from these two examples. The default
+  output value should be the MSB of ''In_i''.'
+interface: module four_mux (input [15:0] In_i, input [3:0] S, output Out_o);

@@ -1,0 +1,13 @@
+description: '`SHA256SUM0`: It specifies a function clause that operates on two parameters:
+  rs1 (source register index) and rd (destination register index). The function performs
+  a specified transformation on a 32-bit input from the source register (rs1), then
+  stores the result into the destination register (rd).Here''s an overview of its
+  functionality: Extract 32-bit Input: It extracts a 32-bit value (inb) from the source
+  register indicated by rs1. Compute Result: The function computes the result by applying
+  the following functions to inb: Rotate Right 2 Bits (ror32(inb, 2)): Performs a
+  bitwise rotation to the right by 2 bits. Rotate Right 13 Bits (ror32(inb, 13)):
+  Performs a bitwise rotation to the right by 13 bits. Rotate Right 22 Bits (ror32(inb,
+  22)): Performs a bitwise rotation to the right by 22 bits. The result is the XOR
+  of these three functions'' outputs.Store Result: The 32-bit computed result is sign-extended
+  (EXTS(result)) and stored in the destination register specified by rd.'
+interface: module SHA256SUM0( input [31:0] rs1, output reg [31:0] rd);

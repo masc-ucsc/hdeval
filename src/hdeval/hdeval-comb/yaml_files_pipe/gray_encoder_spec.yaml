@@ -1,0 +1,4 @@
+description: Design a 4-bit binary to gray-code encoder. Each time the binary inputs
+  change, the corresponding gray code output should be displayed. It has a 4-bit `binary_input`
+  and a 4-bit `gray_code`.
+interface: module gray_encoder (input  [3:0] binary_input, output [3:0] gray_code);

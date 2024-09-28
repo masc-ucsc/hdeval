@@ -1,0 +1,3 @@
+description: 'Design a module with input: [7:0]a and output: [7:0]result that shifts
+  an 8-bit number to the left by 2 positions.'
+interface: module left_shifter (input  [7:0] a, output [7:0] result);

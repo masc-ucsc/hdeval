@@ -1,0 +1,6 @@
+description: 'zip: Place upper/lower halves of the source register into odd/even bits
+  of the destination respectivley. This function places bits in the low half of the
+  source register into the even bit positions of the destination, and bits in the
+  high half of the source register into the odd bit positions of the destination.
+  sourse is `rs` and destination is `rd`.'
+interface: module Zip( input [31:0] rs, output reg [31:0] rd);

@@ -1,0 +1,4 @@
+description: 'pack(Pack the low halves of rs1 and rs2 into rd.): The pack function
+  packs the XLEN/2-bit lower halves of rs1 and rs2 into rd, with rs1 in the lower
+  half and rs2 in the upper half. The result will be saved in `rd`.'
+interface: module pack( input [31:0] rs1, input [31:0] rs2, output reg [31:0] rd);

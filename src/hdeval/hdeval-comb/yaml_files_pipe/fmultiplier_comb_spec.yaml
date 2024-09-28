@@ -1,0 +1,13 @@
+description: Implement the `fmultiplier_comb` module, create a module with two 32-bit
+  inputs, `a` and `b`, representing single-precision IEEE 754 floating-point numbers,
+  and a 32-bit output `z` for the multiplication result. Begin by extracting the sign,
+  exponent, and mantissa from each input, remembering to include an implicit '1' for
+  the mantissa of normalized numbers. Address special cases such as zero, infinity,
+  and NaN by checking the exponent and mantissa values. Calculate the result exponent
+  by adding the input exponents and adjusting for the bias. Multiply the mantissas,
+  normalize the product, and apply simplified rounding. Use combinational logic to
+  set `z` based on these calculations, handling NaN, infinity, and zero appropriately,
+  and combining the sign, exponent, and mantissa for other cases. Ensure the module
+  operates without clock signals, producing the output directly from the inputs.
+interface: module fmultiplier_comb(input [31:0] a, input [31:0] b, output reg [31:0]
+  z);

@@ -1,0 +1,13 @@
+description: Implement the `double_precision_fp_divider_combinational` module, start
+  by defining two 64-bit inputs, `input_a` and `input_b`, for the dividend and divisor,
+  respectively, and a 64-bit output `output_z` for the quotient. Decompose each input
+  into a sign bit, an 11-bit exponent, and a 52-bit mantissa, remembering to account
+  for the implicit leading '1' in normalized mantissas. Implement logic to handle
+  special cases, including NaN, infinity, and zero, based on IEEE 754 rules. For the
+  division operation, simplify by dividing the extended mantissa of `input_a` by the
+  mantissa of `input_b`, and then construct the output using the calculated sign,
+  adjusted exponent, and the most significant bits of the division result. Include
+  caveats about the simplifications made, such as the lack of rounding and precise
+  handling of subnormal numbers.
+interface: module double_precision_fp_divider_combinational(input [63:0] input_a,
+  input [63:0] input_b, output reg [63:0] output_z);

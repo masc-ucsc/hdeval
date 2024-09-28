@@ -1,0 +1,3 @@
+description: 'Implement a module with inputs: [7:0]a, [7:0]b and output: [0:0]greater
+  that compares two 8-bit numbers and outputs if ''a'' is greater than ''b''.'
+interface: module greater_than_check (input [7:0] a, input [7:0] b, output greater);

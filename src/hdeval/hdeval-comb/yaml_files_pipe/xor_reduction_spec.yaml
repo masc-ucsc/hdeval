@@ -1,0 +1,4 @@
+description: 'Design a module that performs an XOR reduction on its 8 bit input but
+  ''reduce_i''. The output is named ''result_o'' and should be one bit as it is the
+  XOR of each bit of ''reduce_i''. Input(s): reduce_i[7:0]. Output(s): result_o[0].'
+interface: module xor_reduction (input [7:0] reduce_i, output result_o);

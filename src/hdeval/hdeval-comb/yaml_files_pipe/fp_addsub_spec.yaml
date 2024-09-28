@@ -1,0 +1,63 @@
+description: >
+  Generate me an IEEE754 Adder/Subtractor called fp_addsub with input ports named
+  a, b, and subtract, and an output port named y.
+
+
+
+  This module, named `fp_addsub`, performs floating-point addition or subtraction
+  on two 32-bit inputs based on the IEEE 754 standard for floating-point arithmetic.
+  The module has three inputs and one output:
+
+
+  - **Inputs**:
+    - `a` and `b`: Two 32-bit inputs representing floating-point numbers.
+    - `subtract`: A control signal that determines the operation. When `subtract`
+  is high (1), the operation is subtraction; when low (0), it is addition.
+
+  - **Output**:
+    - `y`: A 32-bit output representing the result of the floating-point addition
+  or subtraction.
+
+  **High-Level Description**:
+
+
+  1. **Negation of Input B**: If the operation is subtraction, input `b` is negated.
+  This is done by inverting the sign bit of `b` and leaving the rest of the bits unchanged.
+
+
+  2. **Extraction and Adjustment of Components**: The module extracts the sign, exponent,
+  and fraction (mantissa) parts of both inputs, adjusting the fractions by adding
+  an implicit leading 1 (per IEEE 754 for normalized numbers).
+
+
+  3. **Operation Based on Exponent Comparison**:
+     - If the exponents are different, the number with the smaller exponent is shifted
+  right until the exponents match, and then the fractions are added or subtracted
+  based on the operation and signs of the inputs.
+     - If the exponents are the same, the fractions are directly added or subtracted
+  without shifting.
+
+  4. **Normalization**: After the addition or subtraction, the result may need to
+  be normalized. This involves finding the most significant 1 in the fraction (using
+  a priority encoder to determine how much the result needs to be shifted) and adjusting
+  the fraction and exponent accordingly to maintain the normalized form.
+
+
+  5. **Handling Special Cases**:
+     - **Zero**: If both inputs are zero, the output is zero.
+     - **Infinity**: The module handles cases where inputs are infinity (represented
+  by an exponent of all 1s and a fraction of all 0s) according to IEEE 754 rules,
+  including producing NaN (Not a Number) under certain conditions.
+     - **Normalization and Packing**: The normalized fraction and adjusted exponent
+  are then packed into the 32-bit output, along with the calculated result sign.
+
+  This module effectively implements floating-point addition or subtraction with special
+  handling for cases like infinity and normalization of the result, ensuring compliance
+  with the IEEE 754 standard.
+interface: >-
+  module fp_addsub (
+      input logic [31:0] a,
+      input logic [31:0] b,
+      input logic subtract,
+      output logic [31:0] y
+  );

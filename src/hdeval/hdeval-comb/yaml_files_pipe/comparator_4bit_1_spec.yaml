@@ -1,0 +1,5 @@
+description: Design a 4 bit comparator which takes unsigned inputs A[3:0] and B[3:0]
+  and has output Y[1:0]. If A is greater than B then Y should be 1, if A is less than
+  B then Y should be 3, and if they are equal then Y should be 0.
+interface: module comparator_4bit_1 (input [3:0] A, input [3:0] B, output signed [1:0]
+  Y );

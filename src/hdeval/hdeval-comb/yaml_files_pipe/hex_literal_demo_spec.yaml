@@ -1,0 +1,3 @@
+description: Create a module that uses a hexadecimal literal to set a 16-bit output
+  'o' set to value 0xA55A.
+interface: module hex_literal_demo (output reg [15:0] o);

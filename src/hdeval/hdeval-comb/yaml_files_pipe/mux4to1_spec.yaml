@@ -1,0 +1,4 @@
+description: Design a 4:1 Multiplexer(Mux). The inputs are in0, in1, in2, in3 and
+  2-bit `sel` one-bit output `out_o`.
+interface: module mux4to1 (output out_o,input in0,input in1,input in2,input in3,input
+  [1:0] sel);

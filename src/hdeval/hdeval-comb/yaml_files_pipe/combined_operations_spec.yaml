@@ -1,0 +1,5 @@
+description: 'Design a module that combines multiple bitwise operations. Inputs: [7:0]a,
+  [7:0]b. Outputs: [7:0]o. The module should take two 8-bit inputs ''a'' and ''b'',
+  and produce an 8-bit output ''o'' that is the result of ''(a AND b) XOR (a OR b)''.'
+interface: module combined_operations (input  [7:0] a, input  [7:0] b, output [7:0]
+  o);

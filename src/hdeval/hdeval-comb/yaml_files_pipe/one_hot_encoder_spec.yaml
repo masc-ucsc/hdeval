@@ -1,0 +1,3 @@
+description: Implement a module that encodes a 2-bit input '[1:0]a' into a 4-bit one-hot
+  encoded output '[3:0]one_hot'.
+interface: module one_hot_encoder (input [1:0] a, output reg [3:0] one_hot);

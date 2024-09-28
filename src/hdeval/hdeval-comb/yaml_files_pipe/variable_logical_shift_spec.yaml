@@ -1,0 +1,12 @@
+description: 'Design a variable logical shift module that takes a 6 bit input named
+  ''shift_n_i'' which determines by how many bits the input value must be shifted.
+  A positive ''shift_n_i'' value represents the left shift amount, and a negative
+  ''shift_n_i'' value represents a right shift amount. This means if ''shift_n_i''
+  is all ones, a right shift by 1 will be performed. If ''shift_n_i'' is -32, then
+  a right shift by 32 will be performed, which is the largest right shift possible.
+  The largest left shift possible would thus be 31, as ''shift_n_i'' is only 6 bits
+  wide. The value to be shifted is input through a 32 bit bus named ''val_i'' and
+  is output from a 32 bit bus named ''result_o''. Input(s): shift_n_i[5:0], val_i[31:0].
+  Output(s): result_o[31:0].'
+interface: module variable_logical_shift (input [5:0] shift_n_i, input [31:0] val_i,
+  output [31:0] result_o);

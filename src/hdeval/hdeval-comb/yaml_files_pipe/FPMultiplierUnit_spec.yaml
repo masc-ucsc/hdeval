@@ -1,0 +1,60 @@
+description: "I want to implement the following multiplier from this specification:\
+  \ \n    Adder/Subtracter Unit\n        recv_msg: A 64-bit input, where the first\
+  \ 32 bits represent the first operand and the second 32 bits represent the second\
+  \ operand.\n        recv_val: A signal indicating that the operands are valid.\n\
+  \        recv_rdy: A signal indicating that the unit is ready to receive operands.\n\
+  \        send_msg: A 32-bit output representing the result of the addition/subtraction.\n\
+  \        send_val: A signal indicating that the result is valid.\n        send_rdy:\
+  \ A signal indicating that the next unit is ready to receive the result.\n\n   \
+  \ Multiplier Unit\n        Similar to the Adder/Subtracter Unit, but performs multiplication\
+  \ instead of addition/subtraction.\n\nCan you please implement a floating-point\
+  \ multiplier called FPMultiplierUnit, just implement everything combinationally,\
+  \ please.\nyou need a synthesizable version of the floating-point multiplier. Here's\
+  \ a simplified version of a floating-point multiplier that handles different exponents,\
+  \ NaNs, infinities, and over/underflows.\n\nThis version assumes IEEE 754 single-precision\
+  \ floating-point format, where the first bit is the sign bit, the next 8 bits are\
+  \ the exponent, and the remaining 23 bits are the fraction (also known as the significand\
+  \ or mantissa)\n In the IEEE 754 single-precision floating-point format, the fraction\
+  \ is assumed to have an implied leading 1. This means that the actual value represented\
+  \ by the fraction is 1.fraction, not just fraction.\n\nTo take this into account,\
+  \ we can add a leading 1 to the fractions before multiplying them, and then normalize\
+  \ the result.\nThis version adds a leading 1 to the fractions before multiplying\
+  \ them, and then normalizes the result by shifting it right and incrementing the\
+  \ exponent if the result is greater than 2. This should give a more accurate result\
+  \ than the previous version. However, it still does not handle rounding or denormalized\
+  \ numbers. You might need to add additional logic to handle these cases if they\
+  \ are relevant to your application\n\n\n\n\nThe `FPMultiplierUnit` module is designed\
+  \ to perform floating-point multiplication on two 32-bit IEEE 754 standard floating-point\
+  \ numbers. These numbers are received as a 64-bit input message, with each operand\
+  \ occupying 32 bits. The module outputs the result of the multiplication as a 32-bit\
+  \ floating-point number, also adhering to the IEEE 754 standard. Here's a breakdown\
+  \ of its functionality and interface:\n\n### Module Name\n- `FPMultiplierUnit`\n\
+  \n### Inputs\n- `recv_msg` (64 bits): Encapsulates two 32-bit floating-point numbers\
+  \ to be multiplied. The first operand is in the lower 32 bits, and the second operand\
+  \ is in the upper 32 bits.\n- `recv_val` (1 bit): Indicates that the received message\
+  \ is valid.\n- `send_rdy` (1 bit): Indicates that the downstream component is ready\
+  \ to receive the result.\n\n### Outputs\n- `recv_rdy` (1 bit): Indicates that the\
+  \ module is ready to receive a new input message.\n- `send_msg` (32 bits): Contains\
+  \ the result of the multiplication in IEEE 754 floating-point format.\n- `send_val`\
+  \ (1 bit): Indicates that the result is valid and ready to be sent.\n\n### Functionality\n\
+  1. **Operand Extraction**: The operands are extracted from the `recv_msg` input.\n\
+  2. **Sign Calculation**: The sign of the result is determined by XORing the signs\
+  \ of the two operands.\n3. **Exponent Calculation**: The exponents of the operands\
+  \ are added, and the bias (127 for 32-bit floating-point) is subtracted to adjust\
+  \ for the IEEE 754 format.\n4. **Mantissa Calculation**: The mantissas (with the\
+  \ implied leading 1) of the operands are multiplied, producing a 48-bit result.\n\
+  5. **Normalization**: The result is normalized to fit into the 32-bit result format.\
+  \ If the most significant bit of the mantissa is 1, the mantissa is right-shifted,\
+  \ and the exponent is incremented.\n6. **Special Cases Handling**: The module handles\
+  \ special cases such as NaN (Not a Number), infinity, overflow, and underflow, according\
+  \ to the IEEE 754 standard rules.\n7. **Result Formation**: The sign, exponent,\
+  \ and the 22 least significant bits of the mantissa are combined to form the final\
+  \ result.\n\n### Special Case Handling\n- NaN or infinity: Identified by an exponent\
+  \ of `8'hFF`. If either operand is NaN (indicated by a non-zero fraction part),\
+  \ the result is set to NaN; otherwise, it's set to infinity.\n- Overflow: If the\
+  \ calculated exponent exceeds the maximum value, the result is set to infinity.\n\
+  - Underflow: If the calculated exponent is less than the minimum, the result is\
+  \ set to zero.\n "
+interface: module FPMultiplierUnit( input logic [63:0] recv_msg, input logic recv_val,
+  output logic recv_rdy, output logic [31:0] send_msg, output logic send_val, input
+  logic send_rdy);

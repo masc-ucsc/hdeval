@@ -1,0 +1,13 @@
+description: 'The _7seg_display module controls a seven-segment display using a 4-bit
+  input `val_i`, representing hexadecimal values (0-F). The module has seven single-bit
+  outputs: `top_left_vert_o`, `top_right_vert_o`, `bot_left_vert_o`, `bot_right_vert_o`
+  for the vertical segments, and `top_horizontal_o`, `mid_horizontal_o`, `bot_horizontal_o`
+  for the horizontal segments. Internally, it uses conditional logic to activate these
+  segments based on the input. For each hexadecimal value, the module sets the segments
+  to display the corresponding character, with conditions ensuring correct representation,
+  including specific handling for lowercase ''b'' and ''d'' to avoid confusion with
+  similar-looking numbers. The design is purely combinational, with outputs directly
+  and immediately responding to changes in the input value'
+interface: module _7seg_display (input [3:0] val_i, output top_left_vert_o, output
+  top_right_vert_o, output bot_left_vert_o,  output bot_right_vert_o, output top_horizontal_o,
+  output mid_horizontal_o, output bot_horizontal_o);

@@ -1,0 +1,6 @@
+description: 'Design a module that performs a variable arithmetic right shift. It
+  takes input [4:0]''shift_n_i'' that represents the shift amount and input [31:0]''val_i''
+  which is the value being shifted. The output is [31:0]''result_o''. Input(s): shift_n_i[4:0],
+  val_i[31:0]. Output(s): result_o[31:0].'
+interface: module variable_arithmetic_rightshift (input [4:0] shift_n_i, input [31:0]
+  val_i, output [31:0] result_o);

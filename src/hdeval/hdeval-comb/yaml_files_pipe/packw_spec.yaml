@@ -1,0 +1,4 @@
+description: 'packw(Pack the low 16-bits of rs1 and rs2 into rd): This function packs
+  the low 16 bits of `rs1` and `rs2` into the 32 least-significant bits of rd, sign
+  extending the 32-bit result to the rest of `rd` . the result will be saved in `rd`.'
+interface: module packw( input [31:0] rs1, input [31:0] rs2, output reg [31:0] rd);

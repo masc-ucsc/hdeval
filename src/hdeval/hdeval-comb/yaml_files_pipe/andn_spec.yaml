@@ -1,0 +1,4 @@
+description: 'andn (AND with inverted operand): I need a function that performs the
+  bitwise logical AND function between `rs1` and the bitwise inversion of `rs2`. The
+  result will be saved in `rd`.'
+interface: module andn( input [31:0] rs1, input [31:0] rs2, output reg [31:0] rd);

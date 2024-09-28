@@ -1,0 +1,7 @@
+description: "clmul(Carry-less multiply (low-part)): `clmul` produces the lower half\
+  \ of the 2\xB7XLEN carry-less product. the inputs are `rs1`, `rs2` and the result\
+  \ will be saved in `rd`. To implement the clmul (Carry-less multiply, low part)\
+  \ function, which calculates the lower half of the 2*XLEN carry-less product of\
+  \ two inputs (rs1 and rs2). This function iteratively shifts and conditionally XORs\
+  \ based on the bits of rs2."
+interface: module clmul(input [31:0] rs1, input [31:0] rs2, output reg [31:0] rd);

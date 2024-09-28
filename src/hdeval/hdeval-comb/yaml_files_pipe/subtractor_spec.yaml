@@ -1,0 +1,3 @@
+description: 'Implement a subtractor module that subtracts ''b'' from ''a'' for two
+  8-bit numbers. Inputs: [7:0]a, [7:0]b. Output: [7:0]diff'
+interface: module subtractor (input  [7:0] a, input  [7:0] b, output [7:0] diff);

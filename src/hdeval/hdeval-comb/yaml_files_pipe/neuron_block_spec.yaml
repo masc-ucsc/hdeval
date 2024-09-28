@@ -1,0 +1,29 @@
+description: 'Please implement the `neuron_block` module, define a module with a set
+  of 8-bit inputs for the neuron''s parameters, including current potential (`voltage_potential_i`),
+  thresholds (`pos_threshold_i`, `neg_threshold_i`), leak value (`leak_value_i`),
+  weights (`weight_type1_i` to `weight_type4_i`), weight selector (`weight_select_i`),
+  resets (`pos_reset_i`, `neg_reset_i`), and an enable signal (`enable_i`). The module
+  should have an 8-bit output `new_potential_o` for the updated potential and a binary
+  output `spike_o` to indicate spiking. Use combinational logic to select the weight
+  based on `weight_select_i` and calculate the new potential by adding the selected
+  weight to the current potential and subtracting the leak value, taking care to manage
+  overflow and underflow. Check if the new potential crosses any thresholds to determine
+  spiking behavior and potential resets. Ensure the neuron only updates when enabled,
+  and resets its outputs when not enabled. Inputs: The module should have several
+  8-bit inputs, each representing different parameters of the neuron: `voltage_potential_i`:
+  The current voltage potential of the neuron. `pos_threshold_i`: The positive threshold
+  voltage at which the neuron fires a spike. `neg_threshold_i`: The negative threshold
+  voltage at which the neuron might inhibit firing. `leak_value_i`: The value representing
+  the neuron''s leakage, reducing its potential over time. `weight_type1_i` to `weight_type4_i`:
+  Four different types of synaptic weights that can be applied to the input signal.
+  `weight_select_i`: A selector for choosing which of the four weight types to apply.
+  `pos_reset_i`: The voltage potential to reset to after a positive spike. `neg_reset_i`:
+  The voltage potential to reset to after dropping below the negative threshold. `enable_i`:
+  An enable signal that allows the neuron to update its state. Outputs: `new_potential_o`:
+  The updated voltage potential of the neuron. `spike_o`: A binary output indicating
+  whether the neuron has fired a spike.'
+interface: module neuron_block (input [7:0] voltage_potential_i, input [7:0] pos_threshold_i,
+  input [7:0] neg_threshold_i, input [7:0] leak_value_i, input [7:0] weight_type1_i,
+  input [7:0] weight_type2_i, input [7:0] weight_type3_i, input [7:0] weight_type4_i,
+  input [7:0] weight_select_i, input [7:0] pos_reset_i, input [7:0] neg_reset_i, input
+  enable_i, output reg [7:0] new_potential_o, output reg spike_o);

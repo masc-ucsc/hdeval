@@ -1,0 +1,16 @@
+description: The module `AddSubUnit` acts as a combinational logic unit within a vector
+  processor, designed to perform either addition or subtraction based on a control
+  signal. It accepts a 64-bit `recv_msg` input, divided into two 32-bit operands (`operand1`
+  and `operand2`), and an `operation` signal that determines the operation mode (addition
+  or subtraction). The `recv_val` input indicates the validity of the operands, and
+  the unit outputs a 32-bit `send_msg` as the result. The `recv_rdy` output, which
+  signals the unit's readiness to receive new data, is linked to the `send_rdy` input,
+  ensuring flow control between units. The result's validity is indicated by the `send_val`
+  output, which mirrors the `recv_val` input state. This setup guarantees that the
+  output result, `send_msg`, is immediately updated based on the current inputs and
+  operation mode, achieving a one-cycle latency for its operations. The module seamlessly
+  integrates into the vector processor's pipeline, providing efficient arithmetic
+  operations essential for data processing tasks.
+interface: module AddSubUnit( input wire [63:0] recv_msg, input wire recv_val, output
+  wire recv_rdy, output wire [31:0] send_msg, output wire send_val, input wire send_rdy,
+  input wire operation);

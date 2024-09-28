@@ -1,0 +1,3 @@
+description: Design a module that showcases the use of both base and width specifiers
+  for a constant. Use the value to set an 8-bit output 'o' to be 170 in decimal.
+interface: module base_width_demo (output reg [7:0] o);

@@ -1,0 +1,3 @@
+description: 'Implement a 2-to-4 binary decoder. The inputs are: [1:0]in_i and the
+  outputs are: [3:0]out_o.'
+interface: module decoder_2to4 (input  [1:0] in_i, output [3:0] out_o);

@@ -1,0 +1,6 @@
+description: 'Design a module that concurrently calculates the bitwise AND, OR, and
+  XOR of two 4-bit vectors ''v1'' and ''v2''. The results should be stored in outputs
+  ''and_result'', ''or_result'', and ''xor_result'' respectively. The inputs: [3:0]v1,
+  [3:0]v2 and the outputs: [3:0]and_result, [3:0]or_result, [3:0]xor_result.'
+interface: module bitwise_operations (input  [3:0] v1, input  [3:0] v2, output [3:0]
+  and_result, output [3:0] or_result, output [3:0] xor_result);

@@ -1,0 +1,6 @@
+description: Design an 8-bit ripple carry adder. you have to design a submodule named
+  fulladder where the inputs are `a`, `b` and `cin`, the outputs are `sum` and `cout`.
+  module `ripple_carry_adder_8bit ` uses the fulladder module and has 3 inputs, 2
+  8-bit inputs `a`, `b` and one-bit `cin`. 8-bit output sun and obe-bit `cout`
+interface: module ripple_carry_adder_8bit (input [7:0] a,   input [7:0] b, input cin,
+  output [7:0] sum, output cout);

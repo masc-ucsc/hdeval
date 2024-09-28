@@ -1,0 +1,5 @@
+description: 'Design a circuit to convert 4-bit binary input into even and odd parity
+  .Problem Requirements: Design the circuit in such a way that it accepts a 4-bit
+  binary as an input (`abcd`). The circuit will generate two outputs, even parity
+  bit (`P1`) and odd parity bit (`P2`).'
+interface: module parity_2 (input [3:0] abcd, output P1, output P2);

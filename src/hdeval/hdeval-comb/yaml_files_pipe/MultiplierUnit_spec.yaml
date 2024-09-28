@@ -1,0 +1,24 @@
+description: "I am implementing a Multiplier Unit with the following specifications:\
+  \ \n- recv_msg: A 64-bit input divided into two parts; the first 32 bits are the\
+  \ first operand, and the second 32 bits are the second operand for the multiplication\
+  \ operation. \n- recv_val: A signal indicating that the operands provided are valid\
+  \ for processing. \n- recv_rdy: A signal that denotes the Multiplier Unit's readiness\
+  \ to receive new operands, directly tied to the send_rdy signal to indicate the\
+  \ unit is ready to receive new data when the next unit is ready to receive the result.\
+  \ \n- send_msg: A 32-bit output that holds the product of the multiplication of\
+  \ the two operands. This output is determined in a purely combinational manner,\
+  \ ensuring no latches are inferred in the design. \n- send_val: A signal that is\
+  \ set to indicate the result of the multiplication is valid and ready to be sent\
+  \ out, which mirrors the state of send_rdy to synchronize the output validity with\
+  \ the readiness of the next unit in the data chain. \n- send_rdy: An input signal\
+  \ indicating that the downstream unit is prepared to accept the result of the multiplication.\
+  \ The design ensures that the Multiplier Unit operates in a flow-controlled manner,\
+  \ producing outputs only when they can be accepted downstream, thereby facilitating\
+  \ a smooth data processing flow without bottlenecks. \nThis description ensures\
+  \ the Multiplier Unit is implemented as a purely combinational logic design, with\
+  \ direct assignments for send_msg, recv_rdy, and send_val based on the inputs and\
+  \ the readiness signal from the next unit (send_rdy), effectively preventing latch\
+  \ inference and adhering to the requirements for a combinational logic implementation."
+interface: module MultiplierUnit (input logic [63:0] recv_msg, input logic recv_val,
+  output logic recv_rdy, output logic [31:0] send_msg, output logic send_val, input
+  logic send_rdy);

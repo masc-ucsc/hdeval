@@ -1,0 +1,3 @@
+description: 'Design a module with inputs: [3:0]a, [3:0]b and output: [0:0]result
+  that computes the logical OR between two 4-bit numbers.'
+interface: module logical_or (input  [3:0] a, input  [3:0] b, output [0:0] result);

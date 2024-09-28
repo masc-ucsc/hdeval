@@ -1,0 +1,6 @@
+description: 'Design a module that implements a variable logical left shift. The shift
+  amount is set by 5 bit input bus ''shift_n_i'' and the value being left shifted
+  is a 32 bit input bus ''val_i''. The result is also a 32 bit output bus named ''result_o''.
+  Input(s): shift_n_i[4:0], val_i[31:0]. Output(s): result_o[31:0].'
+interface: module variable_logical_leftshift (input [4:0] shift_n_i, input [31:0]
+  val_i, output [31:0] result_o);

@@ -1,0 +1,4 @@
+description: 'Implement a module that takes a single-bit input ''in1'' and produces
+  a single-bit output ''out1'', which is the inverted version of ''in1''. The goal
+  is to invert a single-bit input. The input: in1 and the output: [0:0]out1.'
+interface: module inverter (input in1, output [0:0] out1);

@@ -1,0 +1,25 @@
+description: '`AES32ESMI` function, which is designed for use within the encryption
+  process of the AES (Advanced Encryption Standard) cryptographic algorithm, specifically
+  for the mix columns step following an S-box transformation. The function takes four
+  parameters: inputs: bs, rs2, rs1, and output: rd, which serve to determine the byte
+  position for transformation, specify the source registers, and designate the destination
+  register for the outcome. The function performs the following functions: Shift Amount
+  Calculation (shamt): It computes a shift amount (shamt) by concatenating 0b000 to
+  the bits of bs, effectively achieving bs*8. This value determines the byte''s position
+  within a 32-bit word for the S-box transformation. S-Box Input Preparation (si):
+  An 8-bit segment is extracted from rs2 by shifting its 32-bit value right by shamt
+  and then isolating the lowest 8 bits (si). This segment serves as the input for
+  the forward (encryption) S-Box lookup. S-Box Transformation (so): The si value is
+  transformed using the AES S-box (aes_sbox_fwd(si)), resulting in a transformed 8-bit
+  value (so). MixColumn Transformation (mixed): Applies the AES mix column function
+  (aes_mixcolumn_byte_fwd) on so, expanding it into a 32-bit value. This step is part
+  of the AES encryption process, enhancing diffusion by mixing the bytes of each column
+  in the state. Combination with rs1 and Rotation: The 32-bit value from rs1 is combined
+  with the mix column transformed value (mixed) through XOR, after which the result
+  is rotated left (rol32) by an amount determined by shamt (converted to an unsigned
+  integer). This aligns the transformed byte to its appropriate position in the 32-bit
+  word. The result will store in rd. the AES forward S-box transformation. It takes
+  an 8-bit input and theoretically returns an 8-bit transformed output. Currently,
+  it simply returns a fixed value (0xFF) and does not perform any actual transformation.'
+interface: module AES32ESMI(input [31:0] rs1, input [31:0] rs2, input [4:0] bs, output
+  reg [31:0] rd);

@@ -1,0 +1,17 @@
+description: 'Implement a `float_to_int_combinational` module, A single 32-bit input
+  (`input_a`), representing the single-precision floating-point number to be converted.
+  A single 32-bit output (`output_z`), which will hold the converted integer value,
+  define a module that accepts a 32-bit input representing a single-precision IEEE
+  754 floating-point number and outputs a 32-bit integer. Start by decomposing the
+  input into its sign, exponent, and mantissa. Adjust the exponent by subtracting
+  the bias (127) to find the actual exponent value. Normalize the mantissa by adding
+  an implicit ''1'' for non-zero exponents, resulting in a 24-bit value. Calculate
+  the amount to shift the normalized mantissa to convert it to an integer, considering
+  the actual exponent. Include logic to handle special cases: set the output to 0
+  for zero or denormalized inputs, and saturate the output at the maximum or minimum
+  integer values for overflow conditions. For normal cases, right-shift the normalized
+  mantissa by the calculated amount and apply the sign to determine the final integer
+  output. This module should use combinational logic to produce the output directly
+  from the input without any clocked operations.'
+interface: module float_to_int_combinational(input [31:0] input_a, output reg [31:0]
+  output_z);
