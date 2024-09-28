@@ -1,6 +1,0 @@
-description: Design a 2:1 multiplexer it has 3 1-bit inputs `d0` and `d1` and a select
-  `s`, the 1-bit output is `y`  . A multiplexer (mux) is a device that selects one
-  of several analog or digital input signals and forwards the selected input into
-  a single line. Here, a 2:1 mux will select between two inputs, under the control
-  of a select line.
-interface: module mux2to1 (input d0, input d1, input s, output reg y);

@@ -1,2 +1,0 @@
-description: 'Develop a module that inverts the bits. Inputs: [7:0]a. Outputs: [7:0]o.'
-interface: module bitwise_not (input  [7:0] a, output [7:0] o);

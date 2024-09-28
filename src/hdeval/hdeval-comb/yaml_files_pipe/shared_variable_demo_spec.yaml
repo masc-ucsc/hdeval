@@ -1,6 +1,0 @@
-description: 'Implement a module with two always blocks that share a common variable
-  ''shared_var''. The input: [7:0]a and the outputs: [7:0]o, [7:0]shared_var. The
-  fireset block should update ''shared_var'' with input ''a'', and the second block
-  should set output ''o'' to ''shared_var''.'
-interface: module shared_variable_demo (input  [7:0] a, output [7:0] o, output [7:0]
-  shared_var);

@@ -1,7 +1,0 @@
-description: "clmulh(Carry-less multiply (high-part)): clmulh produces the upper half\
-  \ of the 2\xB7XLEN carry-less product. the inputs are `rs1`, `rs2` and the result\
-  \ will be saved in `rd`. clmulh (Carry-less multiply, high part) function, which\
-  \ calculates the upper half of the 2*XLEN carry-less product of two inputs. This\
-  \ code iteratively shifts and conditionally XORs based on the bits of rs2, focusing\
-  \ on producing the upper half of the result."
-interface: module clmulh(  input [31:0] rs1, input [31:0] rs2, output reg [31:0] rd);

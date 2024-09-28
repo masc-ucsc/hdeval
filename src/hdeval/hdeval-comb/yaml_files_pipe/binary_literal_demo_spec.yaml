@@ -1,3 +1,0 @@
-description: Implement a module which takes a 4-bit input 'a' and outputs 'o' as 1
-  if 'a' is equal to a binary literal of value 11.
-interface: module binary_literal_demo (input [3:0] a, output o);

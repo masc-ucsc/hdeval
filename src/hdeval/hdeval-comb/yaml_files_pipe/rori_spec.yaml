@@ -1,5 +1,0 @@
-description: 'rori(Rotate Right (Immediate)): I need a function that performs a rotate
-  right of rs1 by the amount in the least-significant log2(XLEN) bits of `shamt`.
-  The encodings corresponding to shamt[5]=1 are reserved. The result will be saved
-  in `rd`.'
-interface: module rori( input [31:0] rs1, input [5:0] shamt, output reg [31:0] rd);

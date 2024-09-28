@@ -1,5 +1,0 @@
-description: Design a module that takes two signed 8 bit inputs 'a' and 'b' and sets
-  the sole output bit 'out_o' when 'a' is less than 'b' by at least 5, ignoring any
-  overflow conditions
-interface: module biased_sign_compare (input signed [7:0] a, input signed [7:0] b,
-  output out_o);

@@ -1,5 +1,0 @@
-description: 'Implement a module that computes both the sum and difference of two
-  4-bit inputs ''a'' and ''b'' concurrently, producing two 4-bit outputs ''sum'' and
-  ''diff''. The inputs: [3:0]a, [3:0]b and the outputs: [3:0]sum, [3:0]diff.'
-interface: module concurrent_arithmetic (input  [3:0] a, input  [3:0] b, output [3:0]
-  sum, output [3:0] diff);

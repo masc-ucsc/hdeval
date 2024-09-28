@@ -1,7 +1,0 @@
-description: Implement a 4-bit parity generator. parity_generator which calculates
-  the parity of a 4-bit input. The input, named data_in, is 4 bits wide. The output,
-  named parity_out, is a single bit representing the even parity of the input. The
-  even parity is generated such that the total number of '1' bits in the combined
-  input and output is even, where the output is high if the number of 1's in the input
-  is even, and low if the number of 1's in the input is odd.
-interface: module parity_generator (input [3:0] data_in, output reg parity_out);

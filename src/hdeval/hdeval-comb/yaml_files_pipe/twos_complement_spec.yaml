@@ -1,3 +1,0 @@
-description: 'Design a module that takes a 4-bit binary input and outputs its 2''s
-  complement value. Inputs: [3:0]bin_in. Output: [3:0]twos_out'
-interface: module twos_complement (input [3:0] bin_in, output reg [3:0] twos_out);

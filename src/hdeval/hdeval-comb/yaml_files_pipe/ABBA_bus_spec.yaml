@@ -1,4 +1,0 @@
-description: 'Create a module that concatenates and duplicates inputs 8 bit inputs
-  ''a_i'' and ''b_i'' into a 32 bit bus in the order of a_i, b_i, b_i, a_i. The output
-  wire name is ''result_o''. Input(s): a_i[7:0], b_i[7:0]. Output(s): result_o[31:0].'
-interface: module ABBA_bus (input [7:0] a_i, input [7:0] b_i, output [31:0] result_o);

@@ -1,3 +1,0 @@
-description: 'Create a module with input: [3:0]a and output: [1:0]count that counts
-  the number of ''1''s in a 4-bit input and outputs a 2-bit result.'
-interface: module count_ones (input [3:0] a, output reg [1:0] count);

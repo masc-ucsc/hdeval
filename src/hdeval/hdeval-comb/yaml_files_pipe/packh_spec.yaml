@@ -1,4 +1,0 @@
-description: 'packh(Pack the low bytes of rs1 and rs2 into rd): the packh function
-  packs the least-significant bytes of `rs1` and `rs2` into the 16 least-significant
-  bits of `rd`, zero extending the rest of `rd` the result will be saved in `rd`.'
-interface: module packh(input [31:0] rs1,input [31:0] rs2,output reg [31:0] rd);

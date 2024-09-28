@@ -1,7 +1,0 @@
-description: Design a simple 8-bit comparator, the inputs are 2 8-bit `A` and `B`
-  the outputs are `AeqB`, 'AgtB', and 'AltB'. A comparator is a device that compares
-  two binary words and determines their relative magnitudes. The output of a comparator
-  has three states - `AeqB=1` for A==B (equal), `AgtB=1` for A>B (greater), `AltB=1`
-  for A<B (less than). The problem is to design an 8-bit comparator .
-interface: module comparator_8bit (input  [7:0] A, input  [7:0] B, output AeqB, output
-  AltB, output AgtB);

@@ -1,3 +1,0 @@
-description: 'Design a 1-bit full adder. The inputs are: [0:0]a, [0:0]b, [0:0]cin
-  and the outputs are: [0:0]sum, [0:0]cout.'
-interface: module full_adder (input a, input b, input cin, output sum, output cout);

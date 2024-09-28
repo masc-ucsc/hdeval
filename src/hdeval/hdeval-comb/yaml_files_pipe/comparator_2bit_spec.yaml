@@ -1,5 +1,0 @@
-description: Create a 2-bit comparator  which will accept two 2-bit numbers as input
-  and generate the outputs less than, equal to, and greater than. The inputs are 2-bit
-  `A` and `B`, the outputs are 1-bit `LT`, `EQ` and `GT`
-interface: module comparator_2bit (input  [1:0] A,input  [1:0]  B,output LT,output
-  EQ,output GT);

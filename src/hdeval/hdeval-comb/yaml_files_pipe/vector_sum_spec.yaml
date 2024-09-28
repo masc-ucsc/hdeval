@@ -1,3 +1,0 @@
-description: 'Create a module that utilizes a for loop to find the sum of each bit
-  of input ''data''. Inputs: [7:0]data. Outputs: [3:0]sum.'
-interface: module vector_sum (input [7:0] data, output reg [3:0] sum);

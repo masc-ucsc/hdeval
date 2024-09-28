@@ -1,5 +1,0 @@
-description: Design an 8-bit value comparator, the inputs are A[7:0] and B[7:0], and
-  the output is AeqB[1:0] which can assume either value 0, when A < B, value 1 when
-  A == B, or value 2 when A > B.
-interface: module comparator_8bit_2 (input  [7:0] A, input  [7:0] B, output [1:0]
-  AeqB);

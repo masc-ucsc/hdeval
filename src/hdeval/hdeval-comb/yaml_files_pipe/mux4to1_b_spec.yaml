@@ -1,8 +1,0 @@
-description: "Design a 4:1 Multiplexer, the inputs are a 4-bit `a` and 2-bit `s` and\
-  \ the output is 1-bit `y` .A multiplexer, also known as MUX, is a combinational\
-  \ circuit that selects binary information from one of the many input lines and directs\
-  \ it to a single output line. The selection of a particular input line is controlled\
-  \ by a set of selection lines. \n\nHere, the task is to design a 4:1 MUX which has\
-  \ four input lines, two selection lines, and one output line. The output line depends\
-  \ on the input selected by the selection line."
-interface: module mux4to1_b (input [3:0] a, input [1:0] s, output reg y);

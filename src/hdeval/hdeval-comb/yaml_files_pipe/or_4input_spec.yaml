@@ -1,3 +1,0 @@
-description: 'Implement a 4-input OR gate using only 2-input OR gates. The inputs
-  are: [0:0]in0, [0:0]in1, [0:0]in2, [0:0]in3 and the output is: [0:0]out_o.'
-interface: module or_4input (input  in0, input in1, input in2, input in3, output out_o);

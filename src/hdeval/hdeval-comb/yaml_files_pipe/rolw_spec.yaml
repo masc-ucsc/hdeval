@@ -1,5 +1,0 @@
-description: 'rolw(Rotate Left Word (Register)): I need a function that performs a
-  rotate left on the least-significant word of `rs1` by the amount in least-significant
-  5 bits of `rs2`. The resulting word value is sign-extended by copying bit 31 to
-  all of the more-significant bits. The result will be saved in `rd`.'
-interface: module rolw( input [31:0] rs1, input [31:0] rs2, output reg [31:0] rd);

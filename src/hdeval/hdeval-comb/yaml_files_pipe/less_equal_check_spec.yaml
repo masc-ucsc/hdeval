@@ -1,3 +1,0 @@
-description: 'Design a module with inputs: [7:0]a, [7:0]b and output: [0:0]less_eq
-  that checks if an 8-bit number is less than or equal to another 8-bit number.'
-interface: module less_equal_check (input [7:0] a, input [7:0] b, output less_eq);

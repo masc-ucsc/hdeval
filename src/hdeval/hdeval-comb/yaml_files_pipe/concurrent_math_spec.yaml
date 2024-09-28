@@ -1,4 +1,0 @@
-description: 'Implement a module for multiplication and addition of two inputs. The
-  inputs: [3:0]m1, m2 and the outputs: [7:0]product, [4:0]sum.'
-interface: module concurrent_math (input [3:0] m1, input [3:0] m2, output reg [7:0]
-  product, output [4:0] sum);

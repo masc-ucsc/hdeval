@@ -1,7 +1,0 @@
-description: 'The module, sign_extender, performs sign extension on its input. It
-  takes an 8-bit number original and extends it to a 16-bit signed number sign_extended_original.
-  If the MSB of the original is 1, the sign_extended bits are all set to 1; if it''s
-  0, they are set to 0. Inputs: `original` (Size: 8 bits): The original number to
-  be sign-extended. Outputs: `sign_extended_original` (Size: 16 bits): The sign-extended
-  result.'
-interface: module sign_extender (input [7:0] original, output reg [15:0] sign_extended_original);

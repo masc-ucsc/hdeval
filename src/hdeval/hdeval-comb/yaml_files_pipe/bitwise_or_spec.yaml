@@ -1,3 +1,0 @@
-description: 'Design a module that calculates the bitwise OR operation. Inputs: [7:0]a,
-  [7:0]b. Outputs: [7:0]o.'
-interface: module bitwise_or (input  [7:0] a, input  [7:0] b, output [7:0] o);

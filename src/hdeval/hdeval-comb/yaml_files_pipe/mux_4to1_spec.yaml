@@ -1,4 +1,0 @@
-description: 'Implement a 4:1 multiplexer. The inputs are: [3:0]data_in, [1:0]select
-  and the outputs are: [0:0]data_out.'
-interface: module mux_4to1 (input [3:0] data_in, input [1:0] select, output reg data_out  //
-  Use reg since we're using procedural assignment);

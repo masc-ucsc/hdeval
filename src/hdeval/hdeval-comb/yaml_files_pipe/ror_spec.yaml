@@ -1,4 +1,0 @@
-description: 'ror(Rotate Right): I need a function that performs a rotate right of
-  `rs1` by the amount in least-significant log2(XLEN) bits of `rs2`. the result will
-  be saved in `rd`.'
-interface: module ror(input [31:0] rs1, input [31:0] rs2, output reg [31:0] rd);

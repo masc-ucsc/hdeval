@@ -1,6 +1,0 @@
-description: 'Design a module that demonstrates the use of a local variable. The input:
-  [7:0]a and the outputs: [15:0]o, [0:0]is_even, It should take an 8-bit input ''a''
-  and set a 1-bit output ''is_even'' to ''1'' if ''a'' is even. Output ''o'' should
-  hold the same value as ''is_even'''
-interface: module local_variable_demo (input  [ 7:0] a, output [15:0] o, output [
-  0:0] is_even);

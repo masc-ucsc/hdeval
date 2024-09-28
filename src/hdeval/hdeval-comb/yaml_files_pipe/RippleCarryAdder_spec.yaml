@@ -1,5 +1,0 @@
-description: 'Design and implement a 4-bit ripple carry adder using 1-bit FullAdder(inputs:
-  `a`, `b` and `ci`. outputs: `sum` and `co`). A ripple carry adder is a digital circuit
-  that produces the arithmetic sum of two binary numbers. The inputs of `RippleCarryAdder`
-  are 4-bit `a` and `b` and the output is 5-bit `sum`'
-interface: module RippleCarryAdder (input  [3:0] a, input  [3:0] b, output [4:0] sum);

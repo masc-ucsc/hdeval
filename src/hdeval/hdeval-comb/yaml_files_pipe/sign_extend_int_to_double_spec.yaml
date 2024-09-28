@@ -1,4 +1,0 @@
-description: 'Implement a module that sign extends an input int sized wire ''int_i[31:0]''
-  to an output double sized wire ''double_o[63:0]''. Input(s): int_i[31:0]. Output(s):
-  double_o[63:0].'
-interface: module sign_extend_int_to_double (input [31:0] int_i, output [63:0] double_o);

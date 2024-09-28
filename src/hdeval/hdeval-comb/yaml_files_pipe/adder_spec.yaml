@@ -1,3 +1,0 @@
-description: 'Design a module that adds two 8-bit numbers. Inputs: [7:0]a, [7:0]b.
-  Output: [7:0]sum'
-interface: module adder (input  [7:0] a, input  [7:0] b, output [7:0] sum);

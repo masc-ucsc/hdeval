@@ -1,7 +1,0 @@
-description: Implement a module that decodes a 4 bit wide one hot input named 'one_hot_i'
-  into its 2 bit decimal form, which is an output bus named 'decoded_o'. There is
-  an additional output single bit wire named 'err_o' which should go high if 'one_hot_i'
-  is not a valid one hot signal, in which case 'decoded_o' should take on value 0.
-  The input(s) are one_hot_i[3:0]. The output(s) are err_o[0] and decoded_o[1:0]
-interface: module one_hot_decoder (input [3:0] one_hot_i, output [1:0] decoded_o,
-  output err_o);

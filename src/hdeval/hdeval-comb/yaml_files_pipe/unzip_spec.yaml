@@ -1,5 +1,0 @@
-description: 'unzip: This function places the even bits of the source register into
-  the low half of the destination, and the odd bits of the source into the high bits
-  of the destination and the result will be saved in `rd`.  sourse is `rs` and destination
-  is `rd`.'
-interface: module unzip(input [31:0] rs,  output reg [31:0] rd);

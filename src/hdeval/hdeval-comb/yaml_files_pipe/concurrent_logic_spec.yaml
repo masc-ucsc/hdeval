@@ -1,5 +1,0 @@
-description: 'Implement a module that has two input signals ''a'' and ''b''. Produce
-  an output ''o1'' that represents the AND operation and an output ''o2'' that represents
-  the OR operation. Both operations should be calculated concurrently. The inputs:
-  a, b and the outputs: [0:0]o1, o2.'
-interface: module concurrent_logic (input  a, input b, output o1, output o2);

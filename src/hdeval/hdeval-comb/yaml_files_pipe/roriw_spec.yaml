@@ -1,5 +1,0 @@
-description: 'roriw(Rotate Right Word by Immediate): I need a function that performs
-  a rotate right on the least-significant word of `rs1` by the amount in the leastsignificant
-  log2(XLEN) bits of `shamt`. The resulting word value is sign-extended by copying
-  bit 31 to all of the more-significant bits. The result will be saved in `rd`.'
-interface: module roriw(input [31:0] rs1, input [4:0] shamt, output reg [31:0] rd);

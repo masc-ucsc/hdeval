@@ -1,3 +1,0 @@
-description: 'Design an 8-bit parity generator. The output should be 1 for even parity.
-  The inputs are: [7:0]in_i and the outputs are: [0:0]parity_out.'
-interface: module even_parity_generator (input [7:0] in_i, output parity_out);

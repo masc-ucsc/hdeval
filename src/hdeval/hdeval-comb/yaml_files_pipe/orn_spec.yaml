@@ -1,4 +1,0 @@
-description: 'orn(OR with inverted operand): I need a function that performs the bitwise
-  logical OR function between rs1 and the bitwise inversion of rs2 and the result
-  will be saved in `rd`.'
-interface: module orn( input [31:0] rs1, input [31:0] rs2, output reg [31:0] rd);

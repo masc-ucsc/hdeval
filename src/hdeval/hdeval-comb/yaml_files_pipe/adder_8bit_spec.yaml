@@ -1,7 +1,0 @@
-description: Create an 8-bit adder using 4-bit adder module, module adder_4bit has
-  2 4-bit input `a`, `b` and one-bit `cin` as input and 4-bit `sum` and 1-bit `cout`
-  as output. You must also provide the implementation of the 4-bit adder as a submodule
-  to the 8-bit adder. The adder_8bit module has 8-bit input `a` and `b`, 1-bit `cin`
-  and 8-bit `sum` and 1-bit `cout` as output
-interface: module adder_8bit (input  [7:0] a, input [7:0] b, input cin, output [7:0]
-  sum, output cout );

@@ -1,5 +1,0 @@
-description: Design a module that takes 8 bit signed inputs 'a' and 'b' and has outputs
-  'div' and 'mod' which are the 6 bit signed results of 'a' by 'b' division and modulus
-  operations, respectively.
-interface: module truncated_sign_div_mod (input signed [7:0] a, input signed [7:0]
-  b, output signed [5:0] div, output signed [5:0] mod);

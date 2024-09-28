@@ -1,3 +1,0 @@
-description: Design and Implement a 2:1 Multiplexer using Behavioral Modeling the
-  inputs are `a` and `b` and `select`, and the output is `y`.
-interface: module mux2x1_behavioral (input a, input b, input select, output reg y);

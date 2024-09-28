@@ -1,4 +1,0 @@
-description: 'Design a module that computes the modulus of two 4-bit numbers ''a''
-  and ''b''. Inputs: [3:0]a, [3:0]b. Output: [3:0]result'
-interface: module modulus_calculator (input  [3:0] a, input  [3:0] b, output [3:0]
-  result);

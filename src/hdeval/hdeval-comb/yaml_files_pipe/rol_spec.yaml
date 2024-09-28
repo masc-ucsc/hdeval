@@ -1,4 +1,0 @@
-description: 'rol(Rotate Left (Register)): I need a function that performs a rotate
-  left of rs1 by the amount in least-significant log2(XLEN) bits of rs2. The result
-  will be saved in `rd`.'
-interface: module rol(input [31:0] rs1, input [31:0] rs2, output reg [31:0] rd);
