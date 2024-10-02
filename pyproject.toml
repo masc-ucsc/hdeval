@@ -16,11 +16,12 @@ pyyaml = "^6.0.2"
 decrypt = "hdeval.decrypt:main"
 yaml2yamls = "hdeval.yaml2yamls:main"
 
-[tool.poetry.include]
-# Include the 'decrypt' script and data files
-"src/decrypt"
-"src/hdeval/hdeval-comb/**/*"
-
+# Include additional files in the package
+include = [
+    "src/decrypt",
+    "src/hdeval/yaml2yamls.py",
+    "src/hdeval/hdeval-comb/**/*"
+]
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

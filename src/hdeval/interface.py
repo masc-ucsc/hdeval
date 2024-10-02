@@ -33,7 +33,7 @@ class HDEvalInterface:
 
             # Path to the decrypt script
             decrypt_script_path = os.path.join(self.hdeval_repo_path, 'decrypt')
-            logger.debug(f"Looking for decrypt script at: {decrypt_script_path}")
+            #logger.debug(f"Looking for decrypt script at: {decrypt_script_path}")
 
             # Ensure the decrypt script exists
             if not os.path.exists(decrypt_script_path):
@@ -46,7 +46,7 @@ class HDEvalInterface:
             # Command to run the decrypt script
             decrypt_command = [decrypt_script_path, f'hdeval-comb/{benchmark_name}']
 
-            logger.info(f"Running decrypt script with command: {' '.join(decrypt_command)}")
+            #logger.info(f"Running decrypt script with command: {' '.join(decrypt_command)}")
 
             # Run the decrypt script
             try:
