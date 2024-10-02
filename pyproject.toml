@@ -16,13 +16,10 @@ pyyaml = "^6.0.2"
 decrypt = "hdeval.decrypt:main"
 yaml2yamls = "hdeval.yaml2yamls:main"
 
-[tool.poetry.package.include]
-"src/decrypt" = { path = "src/decrypt", format = "file" }
-#src/hdeval/yaml2yamls.py = { path = "src/hdeval/yaml2yamls.py", format = "file" }
-#src/hdeval/hdeval-comb = { path = "src/hdeval/hdeval-comb/**", format = "file" }
-"src/hdeval/yaml2yamls.py" = { path = "src/hdeval/yaml2yamls.py", format = "file" }
-# Include the data files in 'hdeval-comb'
-"src/hdeval/hdeval-comb/**/*" = { path = "src/hdeval/hdeval-comb/**/*", format = "file" }
+[tool.poetry.include]
+# Include the 'decrypt' script and data files
+"src/decrypt"
+"src/hdeval/hdeval-comb/**/*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
