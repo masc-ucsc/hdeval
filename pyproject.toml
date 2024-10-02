@@ -2,27 +2,23 @@
 name = "hdeval"
 version = "0.1.0"
 description = "Hardware Description Evaluation Interface"
-authors = ["MASC"]
-repository = "https://github.com/masc-ucsc/hdeval"
-
-[tool.poetry.dependencies]
-#python = "^3.8"
-python = "^3.11"
-pyyaml = "^6.0.2"
-
-[tool.poetry.dev-dependencies]
-
-[tool.poetry.scripts]
-decrypt = "hdeval.decrypt:main"
-yaml2yamls = "hdeval.yaml2yamls:main"
+authors = ["MASC group <frabieik@ucsc.edu>"]
+license = "MIT"
+readme = "README.md"
+python = "^3.6"
 
 # Include additional files in the package
 include = [
     "src/decrypt",
-    "src/hdeval/yaml2yamls.py",
-    "src/hdeval/hdeval-comb/**/*"
+    "src/hdeval/hdeval-comb/**/*",
+    "src/hdeval/yaml2yamls.py"
 ]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pyyaml = "^6.0.2"
+
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
