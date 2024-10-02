@@ -3,22 +3,22 @@ from setuptools import setup, find_packages
 setup(
     name='hdeval',
     version='0.1.0',
-    packages=find_packages(),
     description='Hardware Description Evaluation Interface',
     long_description=open('README.md').read(),
-    install_requires=[],
     author='MASC group',
     author_email='frabieik@ucsc.edu',
-    url='https://github.com/masc-ucsc/hdeval'
+    url='https://github.com/masc-ucsc/hdeval',
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     package_data={'hdeval': ['hdeval-comb/*.hdeval']},
-    scripts=['src/crypt', 'src/decrypt'],
+    scripts=[
+        'src/decrypt',  # Ensure this is a script and has execute permissions
+    ],
     install_requires=[
-        # List your dependencies here
+        'pyyaml>=6.0.2',  # Add your dependencies here
     ],
     classifiers=[
-        # Your classifiers
+        # Add your classifiers here
     ],
     python_requires='>=3.6',
 )
