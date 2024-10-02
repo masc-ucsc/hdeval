@@ -31,3 +31,5 @@ def main():
 
     print("All files have been successfully created.")
 
+if __name__ == "__main__":
+    main()

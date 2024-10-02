@@ -65,7 +65,8 @@ class HDEvalInterface:
                 sys.exit(1)
 
             # Path to the yaml2yamls.py script
-            yaml2yamls_script_path = os.path.join(self.hdeval_repo_path, 'hdeval', 'yaml2yamls.py')
+            #yaml2yamls_script_path = os.path.join(self.hdeval_repo_path, 'hdeval', 'yaml2yamls.py')
+            yaml2yamls_script_path = os.path.join(self.hdeval_repo_path, 'yaml2yamls.py')
             logger.debug(f"Looking for yaml2yamls.py at: {yaml2yamls_script_path}")
 
             # Ensure the yaml2yamls.py script exists
