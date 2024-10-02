@@ -9,24 +9,15 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class HDEvalInterface:
-    def __init__(self, hdeval_repo_path=None):
+    def __init__(self):
         """
         Initialize the HDEvalInterface.
-
-        :param hdeval_repo_path: Path to the hdeval repository. If not provided, it will be found via the hdeval package.
+        Assumes that hdeval is located at './hdeval' relative to this file.
         """
-        if hdeval_repo_path:
-            self.hdeval_repo_path = hdeval_repo_path
-            logger.info(f"Using provided hdeval_repo_path: {self.hdeval_repo_path}")
-        else:
-            try:
-                import hdeval
-                self.hdeval_repo_path = os.path.dirname(hdeval.__file__)
-                logger.info(f"Found hdeval installed at: {self.hdeval_repo_path}")
-            except ImportError:
-                logger.error("hdeval package not found. Please ensure it's installed via Poetry.")
-                sys.exit(1)
-
+        # Get the path to the directory containing this file
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # Set hdeval_repo_path to the 'hdeval' submodule
+        self.hdeval_repo_path = os.path.join(current_dir, 'hdeval')
         logger.info(f"Initialized HDEvalInterface with hdeval_repo_path: {self.hdeval_repo_path}")
 
     def hdeval_open(self, benchmark_name):
