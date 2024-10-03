@@ -11,6 +11,7 @@ python = "^3.6"
 include = [
     "src/decrypt",
     "src/hdeval/hdeval-comb/**/*",
+    "src/hdeval/hdeval-pip/**/*",
     "src/hdeval/yaml2yamls.py"
 ]
 
