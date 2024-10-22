@@ -37,7 +37,7 @@ def main():
 
     for problem in data.get('verilog_problems', []):
         bench_name = problem.get('bench_name', 'unknown')
-        output_filename = os.path.join(output_dir, f"{bench_name}_spec.yaml")
+        output_filename = os.path.join(output_dir, f"{bench_name}.yaml")
 
         # Clean and prepare 'bench_response'
         bench_response = problem.get('bench_response', '')
