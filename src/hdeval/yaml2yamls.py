@@ -48,11 +48,14 @@ def main():
         interface = problem.get('interface', '')
         interface = ruamel.yaml.scalarstring.LiteralScalarString(interface)
 
+        bench_stage = problem.get('bench_stage', 0)
+
         with open(output_filename, 'w') as outfile:
             yaml.dump({
                 'description': problem.get('description', ''),
                 'interface': interface,
-                'bench_response': bench_response
+                'bench_response': bench_response,
+                'bench_stage': bench_stage
             }, outfile)
             print(f"File written: {output_filename}")
 
