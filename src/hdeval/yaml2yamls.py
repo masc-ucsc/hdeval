@@ -22,7 +22,12 @@ def main():
     args = parser.parse_args()
 
     input_yaml = args.input_yaml
-    output_dir = os.path.join(os.path.dirname(input_yaml), 'yaml_files_pipe')
+    # Ask the user to enter the name of the output folder
+    output_folder_name = input("Enter the name of the output folder: ").strip()
+    if not output_folder_name:
+        output_folder_name = 'yaml_files_pipe'  # Default folder name if none provided
+    output_dir = os.path.join(os.path.dirname(input_yaml), output_folder_name)   
+    # output_dir = os.path.join(os.path.dirname(input_yaml), 'yaml_files_pipe')
     os.makedirs(output_dir, exist_ok=True)
     print(f"Output directory: {output_dir}")
 
