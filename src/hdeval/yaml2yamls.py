@@ -22,7 +22,10 @@ def main():
     args = parser.parse_args()
 
     input_yaml = args.input_yaml
-    output_dir = os.path.join(os.path.dirname(input_yaml), 'yaml_files_pipe')
+    benchmark_name = os.path.splitext(os.path.basename(input_yaml))[0]
+
+    # output_dir = os.path.join(os.path.dirname(input_yaml), 'yaml_files_pipe')
+    output_dir = os.path.join(os.path.dirname(input_yaml), f'yaml_files_pipe_{benchmark_name}')
     os.makedirs(output_dir, exist_ok=True)
     print(f"Output directory: {output_dir}")
 

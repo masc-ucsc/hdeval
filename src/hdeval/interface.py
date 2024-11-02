@@ -93,7 +93,11 @@ class HDEvalInterface:
             logger.info(f"Successfully decrypted and processed {benchmark_name}.yaml")
 
         # After processing, list all YAML files in yaml_files_pipe
-        yaml_files_pipe_dir = os.path.join(hdeval_comb_dir, 'yaml_files_pipe')
+        # yaml_files_pipe_dir = os.path.join(hdeval_comb_dir, 'yaml_files_pipe')
+        yaml_files_pipe_dir = os.path.join(hdeval_comb_dir, f'yaml_files_pipe_{benchmark_name}')
+        if not os.path.exists(yaml_files_pipe_dir):
+            os.makedirs(yaml_files_pipe_dir)
+
         logger.debug(f"Looking for generated YAML files in: {yaml_files_pipe_dir}")
 
         if not os.path.exists(yaml_files_pipe_dir):
